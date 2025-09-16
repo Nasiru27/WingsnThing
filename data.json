@@ -1,0 +1,205 @@
+{
+  "restaurantName": "Wings'n'Tings",
+  "currency": "Le",
+  "adminPassword": "password",
+  "waiterPassword": "password",
+  "categories": [
+    "Appetizers",
+    "Main Courses",
+    "Desserts",
+    "Drinks",
+    "Burgers and Wrap",
+    "Salad and Light Meal",
+    "Wings and Barbecue",
+    "Sides and Small Chops",
+    "Chicken Dishes"
+  ],
+  "menuItems": [
+    {
+      "id": "item-1757452480556",
+      "name": "Special Hamburger",
+      "description": "Chess Burger",
+      "price": 130,
+      "category": "Burgers and Wrap",
+      "image": "/uploads/1757452455647-29709.jpg",
+      "isAvailable": true
+    },
+    {
+      "id": "item-1757452585337",
+      "name": "Chicken ",
+      "description": "Grill Chicken ",
+      "price": 99.99,
+      "category": "Appetizers",
+      "image": "/uploads/1757452557766-2150741771.jpg",
+      "isAvailable": true
+    },
+    {
+      "id": "item-1757983643101",
+      "name": "Fried Rice and Grilled Chicken",
+      "description": "mixed continental rice",
+      "price": 130,
+      "category": "Main Courses",
+      "image": "/uploads/1757983559842-Lunch_goals_-_fried_rice_and_grilled_chicken😋😋_Now,_i_feel_like_eating_fried_rice_😩_📸__@gazkitchen____Instagram_(1).jpeg",
+      "isAvailable": true
+    },
+    {
+      "id": "item-1757983884224",
+      "name": "Rich Cake",
+      "description": "",
+      "price": 50,
+      "category": "Desserts",
+      "image": "/uploads/1757983849320-BEST_Vanilla_Cupcakes_-_Eats_Delightful.jpeg",
+      "isAvailable": true
+    },
+    {
+      "id": "item-1757983959971",
+      "name": "White Rice and Cassava Leaf Stew",
+      "description": "",
+      "price": 80,
+      "category": "Main Courses",
+      "image": "/uploads/1757983920700-Cassava_Leaf_Stew_with_Rice_from_Sierra_Leone.jpeg",
+      "isAvailable": true
+    },
+    {
+      "id": "item-1757983998116",
+      "name": "Fries",
+      "description": "",
+      "price": 50,
+      "category": "Sides and Small Chops",
+      "image": "/uploads/1757983968981-download_(1).jpeg",
+      "isAvailable": true
+    },
+    {
+      "id": "item-1757984049884",
+      "name": "Grilled Chicken and Fries ",
+      "description": "",
+      "price": 150,
+      "category": "Sides and Small Chops",
+      "image": "/uploads/1757984007298-download_(2).jpeg",
+      "isAvailable": true
+    },
+    {
+      "id": "item-1757984128564",
+      "name": "Fried Rice and Fried Fish",
+      "description": "",
+      "price": 200,
+      "category": "Sides and Small Chops",
+      "image": "/uploads/1757984079428-download_(3).jpeg",
+      "isAvailable": true
+    },
+    {
+      "id": "item-1757984182472",
+      "name": "Chicken and Chips ",
+      "description": "",
+      "price": 100,
+      "category": "Sides and Small Chops",
+      "image": "/uploads/1757984143199-download_(4).jpeg",
+      "isAvailable": true
+    },
+    {
+      "id": "item-1757984265359",
+      "name": "Cous Cous and Chicken ",
+      "description": "",
+      "price": 150,
+      "category": "Sides and Small Chops",
+      "image": "/uploads/1757984237715-Fast_Chicken_and_Couscous_Plate.jpeg",
+      "isAvailable": true
+    },
+    {
+      "id": "item-1757984321150",
+      "name": "Barbecue wings , Chips and Plantain",
+      "description": "",
+      "price": 170,
+      "category": "Wings and Barbecue",
+      "image": "/uploads/1757984278687-Fried_plantain_x_fried_yam_x_pepper_sauce_x_fried_chicken.jpeg",
+      "isAvailable": true
+    },
+    {
+      "id": "item-1757984363860",
+      "name": "White Rice and Groundnut Soup",
+      "description": "",
+      "price": 80,
+      "category": "Main Courses",
+      "image": "/uploads/1757984335851-Groundnut_soup.jpeg",
+      "isAvailable": true
+    },
+    {
+      "id": "item-1757984390503",
+      "name": "Fish  Balls",
+      "description": "",
+      "price": 10,
+      "category": "Appetizers",
+      "image": "/uploads/1757984377917-Hong_Kong_Street_Food_Style_Curry_Fish_Balls_Recipe___ET_Food_Voyage.jpeg",
+      "isAvailable": true
+    },
+    {
+      "id": "item-1757984425851",
+      "name": "Fried Rice and Grilled Chicken ",
+      "description": "",
+      "price": 130,
+      "category": "Wings and Barbecue",
+      "image": "/uploads/1757984405408-Lunch_goals_-_fried_rice_and_grilled_chicken😋😋_Now,_i_feel_like_eating_fried_rice_😩_📸__@gazkitchen____Instagram.jpeg",
+      "isAvailable": true
+    },
+    {
+      "id": "item-1757984463147",
+      "name": "Meat Pie ",
+      "description": "",
+      "price": 20,
+      "category": "Sides and Small Chops",
+      "image": "/uploads/1757984436951-Nigerian_meat_pie.jpeg",
+      "isAvailable": true
+    },
+    {
+      "id": "item-1757984494430",
+      "name": "Barbecue Chicken ",
+      "description": "",
+      "price": 100,
+      "category": "Chicken Dishes",
+      "image": "/uploads/1757984475662-Quick_and_Easy_Recipes_–_Baked_BBQ_Chicken_Dinner_Idea.jpeg",
+      "isAvailable": true
+    },
+    {
+      "id": "item-1757984543990",
+      "name": "Acheke ",
+      "description": "",
+      "price": 149.99,
+      "category": "Sides and Small Chops",
+      "image": "/uploads/1757984511173-Sisters_Recipes___7_layer_salad_recipe___Facebook.jpeg",
+      "isAvailable": true
+    },
+    {
+      "id": "item-1757984607917",
+      "name": "Barbecue Wings ",
+      "description": "",
+      "price": 100,
+      "category": "Chicken Dishes",
+      "image": "/uploads/1757984583655-Smoky_BBQ_Chicken_Wings_for_Backyard_Feasts___Tasty_Meals_Blog.jpeg",
+      "isAvailable": true
+    },
+    {
+      "id": "item-1757984631076",
+      "name": "Foo Foo",
+      "description": "",
+      "price": 150,
+      "category": "Sides and Small Chops",
+      "image": "/uploads/1757984618276-What_is_fufu_(foo-foo)_.jpeg",
+      "isAvailable": true
+    },
+    {
+      "id": "item-1757984748853",
+      "name": "Pop-Corn",
+      "description": "",
+      "price": 15,
+      "category": "Sides and Small Chops",
+      "image": "/uploads/1757984721947-🔥_Minimalist_National_Popcorn_Day_Wallpapers_In_4k_Background_Free_Do.jpeg",
+      "isAvailable": true
+    }
+  ],
+  "backgroundImage": "/uploads/1757451957268-—Pngtree—abstract_blur_coffee_shop_or_15505703.png",
+  "headerBgColor": "rgba(146, 141, 109, 0.75)",
+  "headerTextColor": "#1e293b",
+  "logoUrl": "",
+  "logoType": "text",
+  "textColor": "#172ea1"
+}
