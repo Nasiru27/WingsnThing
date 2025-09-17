@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
+     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -34,4 +34,6 @@
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
   }
+
 }
+
