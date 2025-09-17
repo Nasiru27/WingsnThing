@@ -1,4 +1,5 @@
-'use client'
+"use client";
+
 import React, { useState, useMemo, useEffect } from 'react';
 import { FoodItem, Order } from '@/types';
 import { useAppContext } from '@/context/AppContext';
