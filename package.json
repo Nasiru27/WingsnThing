@@ -11,10 +11,10 @@
   "dependencies": {
     "@google/genai": "^1.12.0",
     "@google/generative-ai": "^0.24.1",
-    "@vercel/kv": "^3.0.0",
     "fast-average-color": "^9.5.0",
     "jose": "^6.0.12",
     "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.19.0",
     "next": "^15.4.5",
     "react": "^18",
     "react-dom": "^18",

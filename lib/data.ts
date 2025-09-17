@@ -1,55 +1,56 @@
-import fs from 'fs';
-import path from 'path';
+import clientPromise from './mongodb';
 import { SavableState } from '@/context/AppContext';
 
-const DB_PATH = path.join(process.cwd(), 'data.json');
+const DB_NAME = 'WingsnThingsDB';
+const COLLECTION_NAME = 'settings';
+const SETTINGS_ID = 'main_settings';
 
-// Create default data if file doesn't exist
-function initializeDb(): SavableState {
-    console.log("Database is empty. Initializing with default values...");
-    const defaultData: SavableState = {
-        restaurantName: 'My Awesome Restaurant',
-        currency: '$',
-        adminPassword: 'password',
-        waiterPassword: 'password',
-        backgroundImage: '',
-        headerBgColor: 'rgba(255, 255, 255, 0.8)',
-        headerTextColor: '#1e293b',
-        categories: ['Appetizers', 'Main Courses', 'Desserts', 'Drinks'],
-        menuItems: [],
-        logoUrl: '',
-        logoType: 'text',
-        textColor: '#1e293b',
-    };
-    fs.writeFileSync(DB_PATH, JSON.stringify(defaultData, null, 2));
-    return defaultData;
+async function getCollection() {
+  const client = await clientPromise;
+  const db = client.db(DB_NAME);
+  return db.collection<Omit<SavableState, '_id'>>(COLLECTION_NAME);
 }
 
-export async function readDb(): Promise<SavableState> {
-    try {
-        if (!fs.existsSync(DB_PATH)) {
-            return initializeDb();
-        }
-        const data = fs.readFileSync(DB_PATH, 'utf-8');
-        return JSON.parse(data) as SavableState;
-    } catch (error) {
-        console.error('Error reading local DB file:', error);
-        throw new Error('Could not read from database.');
-    }
+export async function getInitialServerData(): Promise<SavableState> {
+  console.log("Fetching initial data from MongoDB Atlas...");
+  const collection = await getCollection();
+  
+  // THE FIX IS HERE: Add `as any` to allow searching by a string _id.
+  let data = await collection.findOne({ _id: SETTINGS_ID } as any);
+
+  if (!data) {
+    console.log("No data found in MongoDB. Your app will use the default settings. Go to the admin page and click 'Save All Changes' to create the first database entry.");
+    return {
+      restaurantName: 'My Restaurant',
+      currency: '$',
+      adminPassword: 'password',
+      waiterPassword: 'password',
+      categories: ['Appetizers', 'Main Courses'],
+      menuItems: [],
+      backgroundImage: '',
+      headerBgColor: 'rgba(255, 255, 255, 0.8)',
+      headerTextColor: '#1e2b3c',
+      logoUrl: '',
+      logoType: 'text',
+      textColor: '#1e2b3c',
+    };
+  }
+  
+  console.log("Initial data fetched successfully from MongoDB.");
+  const { _id, ...rest } = data;
+  return rest as SavableState;
 }
 
 export async function writeDb(data: SavableState) {
-    try {
-        fs.writeFileSync(DB_PATH, JSON.stringify(data, null, 2));
-    } catch (error) {
-        console.error('Error writing to local DB file:', error);
-        throw new Error('Could not write to database.');
-    }
-}
-
-export async function getInitialServerData() {
-    console.log("Fetching initial data from local DB file...");
-    const data = await readDb();
-    console.log("Initial data fetched successfully.");
-    return data;
+  try {
+    console.log("Writing data to MongoDB Atlas...");
+    const collection = await getCollection();
+    
+    // THE FIX IS HERE: Add `as any` to allow replacing by a string _id.
+    await collection.replaceOne({ _id: SETTINGS_ID } as any, data, { upsert: true });
+    console.log("Successfully wrote data to MongoDB.");
+  } catch (error) {
+    console.error('Error writing to MongoDB:', error);
+    throw new Error('Could not write to database.');
+  }
 }
